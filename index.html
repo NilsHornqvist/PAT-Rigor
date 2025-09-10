@@ -191,6 +191,11 @@
 </div>
 
 <script>
+function showWelcome2() {
+  document.getElementById("welcome").classList.add("hidden");
+  document.getElementById("welcome2").classList.remove("hidden");
+}
+
 let totalScore = 0;
 let currentQuestion = 1;
 const totalQuestions = 7;
