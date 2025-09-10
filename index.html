@@ -40,15 +40,35 @@
       display: none;
     }
     .option {
-      display: block;
-      margin: 0.5rem 0;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .selected {
-      background: #cccccc;
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.5rem 0.5rem 2rem; /* leave space for circle */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .option::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  .option.selected::before {
+    background: green;
+    border-color: green;
+  }
+
+  .option.selected {
+    background: #cccccc;
     }
   </style>
 </head>
