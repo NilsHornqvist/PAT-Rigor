@@ -79,12 +79,23 @@
   <h2>Psychedelic-Assisted Therapy Specific Rigor Assessment (PATS-R)</h2>
   <p>PATS-R aims to provide further insight into a study’s rigor and reporting practices, unique to a Psychedelic-Assisted Therapy trial.</p>
   <p>PATS-R assesses rigor and reporting practices across 5 domains (Blinding, Fidelity, Outcome, Set and Setting, and Preparation and Integration).</p>
-  <p><b>Please note the following:</b></p>
+  <p>Use one study per assessment and select the answer that matches the study you are assessing.</p>
+  <p>You will be asked 7 questions about the study. For each question, your answer is scored from 0 to 2 (with a lower score indicating lower rigor).</p>
+  <p>After all questions are answered, both a total and a per-domain score will be given. Anotate both the total rigor assessment and the per-domain assessment.</p>
+  <p>Link to the tool: https://nilshornqvist.github.io/PAT-Rigor/ </p>
+  <p>Cite the tool: "Hörnqvist, N., (2025), PATS-R: A tool for assessing rigor in psychedelic-assisted therapy trials</p>
+  <button onclick="startAssessment()">Continue to assessment</button>
+</div>
+
+<div class="container" id="welcome2">
+  <h1>PATS-R Assessment</h1>
+  <h2>Psychedelic-Assisted Therapy Specific Rigor Assessment (PATS-R)</h2>
+  <p><b>Before starting your assessment, please note the following:</b></p>
   <p>- PATS-R is <b>not</b> designed to replace other, more widely used, tools for assessing Risk of Bias, but serves as a complementary assessment.</p>
   <p>- PATS-R is intended for research purposes only.</p>
   <p>- PATS-R is only intended for Randomized Control Trials using Psychedelic-Assisted Therapy.</p>
-  <p>- <b>Your score will not be saved.</b></p>
-  <button onclick="startAssessment()">Start</button>
+  <p><b>- Your score will not be saved.</b></p>
+  <button onclick="startAssessment()">Start assessment</button>
 </div>
 
 <div class="container hidden" id="question1">
@@ -101,10 +112,10 @@
   <h1 id="domain">Domain: Blinding</h1>
   <h2>Does the study investigate blinding success?</h2>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" data-score="2" onclick="selectOption(this)">No form of blinding success was assessed</div>
+  <div class="option" data-score="0" onclick="selectOption(this)">No form of blinding success was assessed</div>
   <div class="option" data-score="1" onclick="selectOption(this)">Blinding was assessed but was less than 10%</div>
   <div class="option" data-score="1" onclick="selectOption(this)">Blinding success was assessed, but it was less than 50%</div>
-  <div class="option" data-score="0" onclick="selectOption(this)">Blinding success was assessed, and it was 50% or more</div>
+  <div class="option" data-score="2" onclick="selectOption(this)">Blinding success was assessed, and it was 50% or more</div>
   <button class="confirm-btn" onclick="confirmAnswer(2)">Confirm Answer</button>
 </div>
 
@@ -113,10 +124,10 @@
   <h2>Was therapist fidelity checked?</h2>
   <p>Therapist fidelity is a measure of how closely each therapy session adhered to its predetermined protocol.</p>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" data-score="2" onclick="selectOption(this)">Therapist’s fidelity was not assessed</div>
+  <div class="option" data-score="0" onclick="selectOption(this)">Therapist’s fidelity was not assessed</div>
   <div class="option" data-score="1" onclick="selectOption(this)">Therapist’s fidelity was used but not directly reported</div>
   <div class="option" data-score="1" onclick="selectOption(this)">Therapist’s fidelity was used but <b>not</b> assessed by independent assessors</div>
-  <div class="option" data-score="0" onclick="selectOption(this)">Therapist's fidelity to the intended protocol was used, directly reported, and examined by independent assessors.</div>
+  <div class="option" data-score="2" onclick="selectOption(this)">Therapist's fidelity to the intended protocol was used, directly reported, and examined by independent assessors.</div>
   <button class="confirm-btn" onclick="confirmAnswer(3)">Confirm Answer</button>
 </div>
 
@@ -125,11 +136,11 @@
   <h2>Was the scale used to assess the primary outcome appropriate?</h2>
   <p>The scales used should be scientifically rigorous.</p>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" data-score="2" onclick="selectOption(this)">The scale shows low sensitivity, is not consistent, is not fully validated, or is not comprehensive</div>
-  <div class="option" data-score="2" onclick="selectOption(this)">No scales were used to measure absolute scores of the disorder</div>
+  <div class="option" data-score="0" onclick="selectOption(this)">The scale shows low sensitivity, is not consistent, is not fully validated, or is not comprehensive</div>
+  <div class="option" data-score="0" onclick="selectOption(this)">No scales were used to measure absolute scores of the disorder</div>
   <div class="option" data-score="1" onclick="selectOption(this)">The scale is validated but relies on self-reporting <b>and</b> is moderately sensitive</div>
-  <div class="option" data-score="0" onclick="selectOption(this)">The scale is comprehensive, validated, shows high sensitivity, and is clinician-administered</div>
-  <div class="option" data-score="0" onclick="selectOption(this)">The scale is comprehensive, validated, shows high sensitivity, but is <strong>not</strong> clinician-administered</div>
+  <div class="option" data-score="2" onclick="selectOption(this)">The scale is comprehensive, validated, shows high sensitivity, and is clinician-administered</div>
+  <div class="option" data-score="2" onclick="selectOption(this)">The scale is comprehensive, validated, shows high sensitivity, but is <strong>not</strong> clinician-administered</div>
   <button class="confirm-btn" onclick="confirmAnswer(4)">Confirm Answer</button>
 </div>
 
@@ -138,10 +149,10 @@
   <h2>Were the session-specific settings described and standardized?</h2>
   <p>Session-specific items include music, eyeshades, how the room was organized, etc.</p>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" data-score="2" onclick="selectOption(this)">Information about the set and settings is unavailable and was not standardized</div>
+  <div class="option" data-score="0" onclick="selectOption(this)">Information about the set and settings is unavailable and was not standardized</div>
   <div class="option" data-score="1" onclick="selectOption(this)">Session-specific settings are reported but not standardized</div>
   <div class="option" data-score="1" onclick="selectOption(this)">Session-specific settings are standardized but not reported</div>
-  <div class="option" data-score="0" onclick="selectOption(this)">Set and setting specifics were standardized</div>
+  <div class="option" data-score="2" onclick="selectOption(this)">Set and setting specifics were standardized</div>
   <button class="confirm-btn" onclick="confirmAnswer(5)">Confirm Answer</button>
 </div>
 
@@ -149,9 +160,9 @@
   <h1 id="domain">Domain: Preparation and integration</h1>
   <h2>Were proper preparation and integration sessions administered throughout the study?</h2>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" data-score="2" onclick="selectOption(this)">No preparatory or integrative sessions were administered, or these sessions were not mandatory</div>
+  <div class="option" data-score="0" onclick="selectOption(this)">No preparatory or integrative sessions were administered, or these sessions were not mandatory</div>
   <div class="option" data-score="1" onclick="selectOption(this)">1 or 2 preparatory sessions were administered before the first dosing, and one or two integrative sessions per experimental session were administered</div>
-  <div class="option" data-score="0" onclick="selectOption(this)">≥3 preparatory / ≥3 integrative sessions per experimental session were administered</div>
+  <div class="option" data-score="2" onclick="selectOption(this)">≥3 preparatory / ≥3 integrative sessions per experimental session were administered</div>
   <button class="confirm-btn" onclick="confirmAnswer(6)">Confirm Answer</button>
 </div>
 
@@ -159,10 +170,10 @@
   <h1 id="domain">Domain: Preparation and integration</h1>
   <h2>Were the preparatory and integrative processes structured, standardized, and equal across groups?</h2>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" data-score="2" onclick="selectOption(this)">Neither of the sessions was standardized or structured</div>
-  <div class="option" data-score="2" onclick="selectOption(this)">Preparatory sessions were standardized, but the integrative sessions differed between the dosing groups</div>
+  <div class="option" data-score="0" onclick="selectOption(this)">Neither of the sessions was standardized or structured</div>
+  <div class="option" data-score="0" onclick="selectOption(this)">Preparatory sessions were standardized, but the integrative sessions differed between the dosing groups</div>
   <div class="option" data-score="1" onclick="selectOption(this)">Preparatory sessions were not standardized or structured, but integrative sessions were structured and standardized</div>
-  <div class="option" data-score="0" onclick="selectOption(this)">Both were structured and standardized and did not differ between dosing groups</div>
+  <div class="option" data-score="2" onclick="selectOption(this)">Both were structured and standardized and did not differ between dosing groups</div>
   <button class="confirm-btn" onclick="confirmAnswer(7)">Confirm Answer</button>
 </div>
 
@@ -173,9 +184,9 @@
   <p id="scoreText"></p>
   <p>Interpretation of score:</p>
   <ul style="text-align:left">
-    <li>0–4 = <b>High rigor</b></li>
+    <li>0–4 = <b>Low rigor</b></li>
     <li>5–9 = <b>Moderate rigor</b></li>
-    <li>10–14 = <b>Low rigor</b></li>
+    <li>10–14 = <b>High rigor</b></li>
   </ul>
 </div>
 
@@ -248,13 +259,13 @@ function answerQuestion(score) {
       for(const [domainName, score] of Object.entries(domainScores)) {
         let risk = "";
         if(domainName === "Domain 1 (Blinding)" || domainName === "Domain 5 (Preparation and Integration)") {
-          if(score === 0) risk = "High rigor";
+          if(score === 0) risk = "Low rigor";
           else if(score <= 2) risk = "Moderate rigor";
-          else risk = "Low rigor";
+          else risk = "High rigor";
         } else {
-          if(score === 0) risk = "High rigor";
+          if(score === 0) risk = "Low rigor";
           else if(score === 1) risk = "Moderate rigor";
-          else risk = "Low rigor";
+          else risk = "High rigor";
         }
         const p = document.createElement("p");
         p.innerHTML = `${domainName}: score: ${score} = ${risk}`;
@@ -266,11 +277,11 @@ function answerQuestion(score) {
 
     let assessmentText = "";
     if(totalScore <= 4){
-      assessmentText = "Your study has a <b>high rigor</b>.";
+      assessmentText = "Your study has a <b>low rigor</b>.";
     } else if(totalScore <= 9){
       assessmentText = "Your study has <b>moderate rigor</b>.";
     } else {
-      assessmentText = "Your study has a <b>low rigor</b>.";
+      assessmentText = "Your study has a <b>high rigor</b>.";
     }
 
     document.getElementById("finalAssessment").innerHTML = assessmentText;
