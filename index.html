@@ -273,8 +273,8 @@ function answerQuestion(score) {
       for(const [domainName, score] of Object.entries(domainScores)) {
         let risk = "";
         if(domainName === "Domain 1 (Blinding)" || domainName === "Domain 5 (Preparation and Integration)") {
-          if(score === 0) risk = "<b>Low rigor</b>";
-          else if(score <= 2) risk = "<b>Moderate rigor</b>";
+          if(score <= 1) risk = "<b>Low rigor</b>";
+          else if(score <= 3) risk = "<b>Moderate rigor</b>";
           else risk = "<b>High rigor</b>";
         } else {
           if(score === 0) risk = "<b>Low rigor</b>";
