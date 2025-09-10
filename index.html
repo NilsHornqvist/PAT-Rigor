@@ -99,7 +99,7 @@
 </div>
 
 <div class="container hidden" id="question1">
-  <h1 id="domain">Q1 Domain: Blinding</h1>
+  <h1 id="domain">Q1/7 Domain: Blinding</h1>
   <h2>Were more rigorous attempts made to blind participants in the control group?</h2>
   <p><b>Blinding the control groups is a problem for psychedelic trials; thus, more rigorous trials have to rely on novel blinding techniques.</b>.</p>
   <p>Select the option that best matches the study you are assessing.</p>
@@ -110,7 +110,7 @@
 </div>
 
 <div class="container hidden" id="question2">
-  <h1 id="domain">Q2 Domain: Blinding</h1>
+  <h1 id="domain">Q2/7 Domain: Blinding</h1>
   <h2>Does the study investigate blinding success?</h2>
   <p><b>Blinding success means the percentage of participants who guessed their dosing group incorrectly.</b>.</p>
   <p><b>Blinding success for therapists should <u>not</u> be considered here, but is instead  assessed with question 3.</b>.</p>
@@ -123,7 +123,7 @@
 </div>
 
 <div class="container hidden" id="question3">
-  <h1 id="domain">Q3 Domain: Therapist Fidelity</h1>
+  <h1 id="domain">Q3/7 Domain: Therapist Fidelity</h1>
   <h2>Was therapist fidelity checked?</h2>
   <p><b>Therapist fidelity is a measure of how closely each therapy session adhered to its predetermined protocol.</b></p>
   <p>Select the option that best matches the study you are assessing.</p>
@@ -135,7 +135,7 @@
 </div>
 
 <div class="container hidden" id="question4">
-  <h1 id="domain">Domain: Outcome</h1>
+  <h1 id="domain">Q4/7 Domain: Outcome</h1>
   <h2>Was the scale used to assess the primary outcome appropriate?</h2>
   <p><b>The scales used should be scientifically rigorous, accurate, reliable, and consistent across time and participants.</b></p>
   <p>Select the option that best matches the study you are assessing.</p>
@@ -148,7 +148,7 @@
 </div>
 
 <div class="container hidden" id="question5">
-  <h1 id="domain">Domain: Set and Setting</h1>
+  <h1 id="domain">Q5/7 Domain: Set and Setting</h1>
   <h2>Were the session-specific settings described and standardized?</h2>
   <p><b>Session-specific items include music, eyeshades, how the room was organized, etc.</b></p>
   <p>Select the option that best matches the study you are assessing.</p>
@@ -160,7 +160,7 @@
 </div>
 
 <div class="container hidden" id="question6">
-  <h1 id="domain">Domain: Preparation and integration</h1>
+  <h1 id="domain">Q6/7 Domain: Preparation and integration</h1>
   <h2>Were proper preparation and integration sessions administered throughout the study?</h2>
   <p><b>Preparatory sessions are the sessions before the first experimental session.</b>.</p>
   <p><b>Integrative sessions are the sessions following each experimental session.</b>.</p>
@@ -172,7 +172,7 @@
 </div>
 
 <div class="container hidden" id="question7">
-  <h1 id="domain">Domain: Preparation and integration</h1>
+  <h1 id="domain">Q7/7 Domain: Preparation and integration</h1>
   <h2>Were the preparatory and integrative processes structured, standardized, and equal across groups?</h2>
   <p><b>Preparatory sessions are the sessions before the first experimental session.</b>.</p>
   <p><b>Integrative sessions are the sessions following each experimental session.</b>.</p>
@@ -210,11 +210,11 @@ const totalQuestions = 7;
 let selectedScore = null;
 
 let domainScores = {
-  "Domain 1 (Blinding)": 0,
-  "Domain 2 (Therapist Fidelity)": 0,
-  "Domain 3 (Outcome)": 0,
-  "Domain 4 (Set and Setting)": 0,
-  "Domain 5 (Preparation and Integration)": 0
+  "Q1 & Q2 Domain 1 (Blinding)": 0,
+  "Q3 Domain 2 (Therapist Fidelity)": 0,
+  "Q4 Domain 3 (Outcome)": 0,
+  "Q5 Domain 4 (Set and Setting)": 0,
+  "Q6 & Q7 Domain 5 (Preparation and Integration)": 0
 };
 
 const questionDomains = {
@@ -271,13 +271,13 @@ function answerQuestion(score) {
       for(const [domainName, score] of Object.entries(domainScores)) {
         let risk = "";
         if(domainName === "Domain 1 (Blinding)" || domainName === "Domain 5 (Preparation and Integration)") {
-          if(score === 0) risk = "Low rigor";
-          else if(score <= 2) risk = "Moderate rigor";
-          else risk = "High rigor";
+          if(score === 0) risk = "<b>Low rigor</b>";
+          else if(score <= 2) risk = "<b>Moderate rigor</b>";
+          else risk = "<b>High rigor</b>";
         } else {
-          if(score === 0) risk = "Low rigor";
-          else if(score === 1) risk = "Moderate rigor";
-          else risk = "High rigor";
+          if(score === 0) risk = "<b>Low rigor</b>";
+          else if(score === 1) risk = "<b>Moderate rigor</b>";
+          else risk = "<b>High rigor</b>";
         }
         const p = document.createElement("p");
         p.innerHTML = `${domainName}: score: ${score} = ${risk}`;
