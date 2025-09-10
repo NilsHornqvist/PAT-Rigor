@@ -71,9 +71,9 @@
   <h1 id="domain">Domain: Blinding</h1>
   <h2>Were more rigorous attempts made to blind participants in the control group?</h2>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" onclick="answerQuestion(2)">Inactive placebo or no active ingredient was used</div>
-  <div class="option" onclick="answerQuestion(1)">Low dose of the same psychedelic was used</div>
-  <div class="option" onclick="answerQuestion(0)">Another psychoactive compound (not a psychedelic) was used</div>
+  <div class="option" data-score="2">Inactive placebo or no active ingredient was used</div>
+  <div class="option" data-score="1">Low dose of the same psychedelic was used</div>
+  <div class="option" data-score="0">Another psychoactive compound (not a psychedelic) was used</div>
   <button class="confirm-btn">Confirm Answer</button>
 </div>
 
@@ -81,10 +81,10 @@
   <h1 id="domain">Domain: Blinding</h1>
   <h2>Does the study investigate blinding success?</h2>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" onclick="answerQuestion(2)">No form of blinding success was assessed</div>
-  <div class="option" onclick="answerQuestion(2)">Blinding was assessed but was less than 10%</div>
-  <div class="option" onclick="answerQuestion(1)">Blinding success was assessed, but it was less than 50%</div>
-  <div class="option" onclick="answerQuestion(0)">Blinding success was assessed, and it was 50% or more</div>
+  <div class="option" data-score="2">No form of blinding success was assessed</div>
+  <div class="option" data-score="1">Blinding was assessed but was less than 10%</div>
+  <div class="option" data-score="1">Blinding success was assessed, but it was less than 50%</div>
+  <div class="option" data-score="0">Blinding success was assessed, and it was 50% or more</div>
   <button class="confirm-btn">Confirm Answer</button>
 </div>
 
@@ -93,10 +93,10 @@
   <h2>Was therapist fidelity checked?</h2>
   <p>Therapist fidelity is a measure of how closely each therapy session adhered to its predetermined protocol.</p>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" onclick="answerQuestion(2)">Therapist’s fidelity was not assessed</div>
-  <div class="option" onclick="answerQuestion(1)">Therapist’s fidelity was used but not directly reported</div>
-  <div class="option" onclick="answerQuestion(1)">Therapist’s fidelity was used but <b>not</b> assessed by independent assessors</div>
-  <div class="option" onclick="answerQuestion(0)">Therapist's fidelity to the intended protocol was used, directly reported, and examined by independent assessors.</div>
+  <div class="option" data-score="2">Therapist’s fidelity was not assessed</div>
+  <div class="option" data-score="1">Therapist’s fidelity was used but not directly reported</div>
+  <div class="option" data-score="1">Therapist’s fidelity was used but <b>not</b> assessed by independent assessors</div>
+  <div class="option" data-score="0">Therapist's fidelity to the intended protocol was used, directly reported, and examined by independent assessors.</div>
   <button class="confirm-btn">Confirm Answer</button>
 </div>
 
@@ -105,11 +105,11 @@
   <h2>Was the scale used to assess the primary outcome appropriate?</h2>
   <p>The scales used should be scientifically rigorous.</p>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" onclick="answerQuestion(2)">The scale shows low sensitivity, is not consistent, is not fully validated, or is not comprehensive</div>
-  <div class="option" onclick="answerQuestion(2)">No scales were used to measure absolute scores of the disorder</div>
-  <div class="option" onclick="answerQuestion(1)">The scale is validated but relies on self-reporting and is moderately sensitive</div>
-  <div class="option" onclick="answerQuestion(0)">The scale is comprehensive, validated, shows high sensitivity, and is clinician-administered</div>
-  <div class="option" onclick="answerQuestion(0)">The scale is comprehensive, validated, shows high sensitivity, but is <strong>not</strong> clinician-administered</div>
+  <div class="option" data-score="2">The scale shows low sensitivity, is not consistent, is not fully validated, or is not comprehensive</div>
+  <div class="option" data-score="2">No scales were used to measure absolute scores of the disorder</div>
+  <div class="option" data-score="1">The scale is validated but relies on self-reporting <b>and</b> is moderately sensitive</div>
+  <div class="option" data-score="0">The scale is comprehensive, validated, shows high sensitivity, and is clinician-administered</div>
+  <div class="option" data-score="0">The scale is comprehensive, validated, shows high sensitivity, but is <strong>not</strong> clinician-administered</div>
   <button class="confirm-btn">Confirm Answer</button>
 </div>
 
@@ -118,10 +118,10 @@
   <h2>Were the session-specific settings described and standardized?</h2>
   <p>Session-specific items include music, eyeshades, how the room was organized, etc.</p>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" onclick="answerQuestion(2)">Information about the set and settings is unavailable and was not standardized</div>
-  <div class="option" onclick="answerQuestion(1)">Session-specific settings are reported but not standardized</div>
-  <div class="option" onclick="answerQuestion(1)">Session-specific settings are standardized but not reported</div>
-  <div class="option" onclick="answerQuestion(0)">Set and setting specifics were standardized</div>
+  <div class="option" data-score="2">Information about the set and settings is unavailable and was not standardized</div>
+  <div class="option" data-score="1">Session-specific settings are reported but not standardized</div>
+  <div class="option" data-score="1">Session-specific settings are standardized but not reported</div>
+  <div class="option" data-score="0">Set and setting specifics were standardized</div>
   <button class="confirm-btn">Confirm Answer</button>
 </div>
 
@@ -129,9 +129,9 @@
   <h1 id="domain">Domain: Preparation and integration</h1>
   <h2>Were proper preparation and integration sessions administered throughout the study?</h2>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" onclick="answerQuestion(2)">No preparatory or integrative sessions were administered, or these sessions were not mandatory</div>
-  <div class="option" onclick="answerQuestion(1)">1 or 2 preparatory sessions were administered before the first dosing, and one or two integrative sessions per experimental session were administered</div>
-  <div class="option" onclick="answerQuestion(0)">≥3 preparatory / ≥3 integrative sessions per experimental session were administered</div>
+  <div class="option" data-score="2">No preparatory or integrative sessions were administered, or these sessions were not mandatory</div>
+  <div class="option" data-score="1">1 or 2 preparatory sessions were administered before the first dosing, and one or two integrative sessions per experimental session were administered</div>
+  <div class="option" data-score="0">≥3 preparatory / ≥3 integrative sessions per experimental session were administered</div>
   <button class="confirm-btn">Confirm Answer</button>
 </div>
 
@@ -139,10 +139,10 @@
   <h1 id="domain">Domain: Preparation and integration</h1>
   <h2>Were the preparatory and integrative processes structured, standardized, and equal across groups?</h2>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" onclick="answerQuestion(2)">Neither of the sessions was standardized or structured</div>
-  <div class="option" onclick="answerQuestion(2)">Preparatory sessions were standardized, but the integrative sessions differed between the dosing groups</div>
-  <div class="option" onclick="answerQuestion(1)">Preparatory sessions were not standardized or structured, but integrative sessions were structured and standardized</div>
-  <div class="option" onclick="answerQuestion(0)">Both were structured and standardized and did not differ between dosing groups</div>
+  <div class="option" data-score="2">Neither of the sessions was standardized or structured</div>
+  <div class="option" data-score="2">Preparatory sessions were standardized, but the integrative sessions differed between the dosing groups</div>
+  <div class="option" data-score="1">Preparatory sessions were not standardized or structured, but integrative sessions were structured and standardized</div>
+  <div class="option" data-score="0">Both were structured and standardized and did not differ between dosing groups</div>
   <button class="confirm-btn">Confirm Answer</button>
 </div>
   
