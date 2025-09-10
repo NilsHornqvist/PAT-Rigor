@@ -20,8 +20,8 @@
       padding: 3rem;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      max-width: 800px;
-      max-height: 800px;
+      max-width: 1000px;
+      max-height: 1000px;
       text-align: center;
     }
     button {
@@ -99,18 +99,21 @@
 </div>
 
 <div class="container hidden" id="question1">
-  <h1 id="domain">Domain: Blinding</h1>
+  <h1 id="domain">Q1 Domain: Blinding</h1>
   <h2>Were more rigorous attempts made to blind participants in the control group?</h2>
+  <p><b>Blinding the control groups is a problem for psychedelic trials; thus, more rigorous trials have to rely on novel blinding techniques.</b>.</p>
   <p>Select the option that best matches the study you are assessing.</p>
-  <div class="option" data-score="2" onclick="selectOption(this)">Inactive placebo or no active ingredient was used</div>
+  <div class="option" data-score="0" onclick="selectOption(this)">Inactive placebo or no active ingredient was used</div>
   <div class="option" data-score="1" onclick="selectOption(this)">Low dose of the same psychedelic was used</div>
-  <div class="option" data-score="0" onclick="selectOption(this)">Another psychoactive compound (not a psychedelic) was used</div>
+  <div class="option" data-score="2" onclick="selectOption(this)">Another psychoactive compound (not a psychedelic) was used</div>
   <button class="confirm-btn" onclick="confirmAnswer(1)">Confirm Answer</button>
 </div>
 
 <div class="container hidden" id="question2">
-  <h1 id="domain">Domain: Blinding</h1>
+  <h1 id="domain">Q2 Domain: Blinding</h1>
   <h2>Does the study investigate blinding success?</h2>
+  <p><b>Blinding success means the percentage of participants who guessed their dosing group incorrectly.</b>.</p>
+  <p><b>Blinding success for therapists should <u>not</u> be considered here, but is instead  assessed with question 3.</b>.</p>
   <p>Select the option that best matches the study you are assessing.</p>
   <div class="option" data-score="0" onclick="selectOption(this)">No form of blinding success was assessed</div>
   <div class="option" data-score="1" onclick="selectOption(this)">Blinding was assessed but was less than 10%</div>
@@ -120,9 +123,9 @@
 </div>
 
 <div class="container hidden" id="question3">
-  <h1 id="domain">Domain: Therapist Fidelity</h1>
+  <h1 id="domain">Q3 Domain: Therapist Fidelity</h1>
   <h2>Was therapist fidelity checked?</h2>
-  <p>Therapist fidelity is a measure of how closely each therapy session adhered to its predetermined protocol.</p>
+  <p><b>Therapist fidelity is a measure of how closely each therapy session adhered to its predetermined protocol.</b></p>
   <p>Select the option that best matches the study you are assessing.</p>
   <div class="option" data-score="0" onclick="selectOption(this)">Therapist’s fidelity was not assessed</div>
   <div class="option" data-score="1" onclick="selectOption(this)">Therapist’s fidelity was used but not directly reported</div>
@@ -134,7 +137,7 @@
 <div class="container hidden" id="question4">
   <h1 id="domain">Domain: Outcome</h1>
   <h2>Was the scale used to assess the primary outcome appropriate?</h2>
-  <p>The scales used should be scientifically rigorous.</p>
+  <p><b>The scales used should be scientifically rigorous, accurate, reliable, and consistent across time and participants.</b></p>
   <p>Select the option that best matches the study you are assessing.</p>
   <div class="option" data-score="0" onclick="selectOption(this)">The scale shows low sensitivity, is not consistent, is not fully validated, or is not comprehensive</div>
   <div class="option" data-score="0" onclick="selectOption(this)">No scales were used to measure absolute scores of the disorder</div>
@@ -147,7 +150,7 @@
 <div class="container hidden" id="question5">
   <h1 id="domain">Domain: Set and Setting</h1>
   <h2>Were the session-specific settings described and standardized?</h2>
-  <p>Session-specific items include music, eyeshades, how the room was organized, etc.</p>
+  <p><b>Session-specific items include music, eyeshades, how the room was organized, etc.</b></p>
   <p>Select the option that best matches the study you are assessing.</p>
   <div class="option" data-score="0" onclick="selectOption(this)">Information about the set and settings is unavailable and was not standardized</div>
   <div class="option" data-score="1" onclick="selectOption(this)">Session-specific settings are reported but not standardized</div>
@@ -159,6 +162,8 @@
 <div class="container hidden" id="question6">
   <h1 id="domain">Domain: Preparation and integration</h1>
   <h2>Were proper preparation and integration sessions administered throughout the study?</h2>
+  <p><b>Preparatory sessions are the sessions before the first experimental session.</b>.</p>
+  <p><b>Integrative sessions are the sessions following each experimental session.</b>.</p>
   <p>Select the option that best matches the study you are assessing.</p>
   <div class="option" data-score="0" onclick="selectOption(this)">No preparatory or integrative sessions were administered, or these sessions were not mandatory</div>
   <div class="option" data-score="1" onclick="selectOption(this)">1 or 2 preparatory sessions were administered before the first dosing, and one or two integrative sessions per experimental session were administered</div>
@@ -169,6 +174,8 @@
 <div class="container hidden" id="question7">
   <h1 id="domain">Domain: Preparation and integration</h1>
   <h2>Were the preparatory and integrative processes structured, standardized, and equal across groups?</h2>
+  <p><b>Preparatory sessions are the sessions before the first experimental session.</b>.</p>
+  <p><b>Integrative sessions are the sessions following each experimental session.</b>.</p>
   <p>Select the option that best matches the study you are assessing.</p>
   <div class="option" data-score="0" onclick="selectOption(this)">Neither of the sessions was standardized or structured</div>
   <div class="option" data-score="0" onclick="selectOption(this)">Preparatory sessions were standardized, but the integrative sessions differed between the dosing groups</div>
